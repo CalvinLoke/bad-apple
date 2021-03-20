@@ -4,6 +4,7 @@ import sys
 import time
 import playsound
 import os
+import logging
 
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
 
@@ -22,10 +23,11 @@ def PlayVideo():
         file_name = r"TextFiles/" + "bad_apple" + str(frame_number) + ".txt"
         f = open(file_name, "r")
         sys.stdout.write("\r" + f.read())
-        frame_delay = float(time.time() - start_time)
-        # delay_duration = frame_interval * (- 0.05 / 9000 + 1.02) - frame_delay (golden value)
+        compute_delay = float(time.time() - start_time)
+        # delay_duration = frame_interval * (- 0.05 / 9000 + 1.02) - compute_delay # (golden value)
         modifier = (-0.04/7500) * frame_number + 1.02
-        delay_duration = frame_interval * modifier - frame_delay
+        delay_duration = frame_interval - compute_delay
+        logging.info(str(delay_duration))
         # print(modifier)
         # print(str(delay_duration))
         if delay_duration < 0:
@@ -121,7 +123,7 @@ def check_txt():
         if os.path.isfile(path_to_file):
             verified_frames += 1
     if verified_frames > 6000:
-        sys.stdout.write("\r.txt files located, moving to animation\n")
+        sys.stdout.write("\r.txt files located, proceeding to animation\n")
     else:
         sys.stdout.write("Converting frames to .txt...\n")
         for frame_count in range(1, 6572):
@@ -129,7 +131,7 @@ def check_txt():
             image = Image.open(path_to_file)
             ascii_generator(image, frame_count)
             progress_bar(frame_count, 6571)
-
+        sys.stdout.write('.txt files created, proceeding to animation')
 
 # Delete extracted frames and .txt files
 def delete_assets():
@@ -154,6 +156,7 @@ def delete_assets():
 # Main function
 def main():
     while True:
+        logging.basicConfig(filename='compute_delay.log', level=logging.INFO)
         sys.stdout.write('==============================================================\n')
         sys.stdout.write('Select option: \n')
         sys.stdout.write('1) Play\n')
@@ -167,9 +170,11 @@ def main():
         if user_input == '1':
             check_frames()  # Check if image frames have been extracted, extract if necessary
             check_txt()  # Check if .txt files have been created, create if necessary
-            os.system('color 70')
+            os.system('color F0')
             PlayAudio()
+            logging.info('Started')
             PlayVideo()
+            logging.info('Stopped')
             os.system('color 07')
             continue
         elif user_input == '2':
