@@ -133,7 +133,7 @@ def check_txt():
 
 # Delete extracted frames and .txt files
 def delete_assets():
-    for index in range(1, 6571):
+    for index in range(1, 6572):
         # sys.stdout.write("Deleting frames...")
         frame_name = r"ExtractedFrames/" + "BadApple_" + str(index) + ".jpg"
         # print(frame_name)
