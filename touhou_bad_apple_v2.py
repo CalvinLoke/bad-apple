@@ -99,39 +99,48 @@ def ascii_generator(image_frame, index):
 
 # Check if frames have been extracted
 def check_frames():
-    sys.stdout.write("Checking if frames have been extracted...\n")
-    verified_frames = 1
-    for frame_count in range(1, 6572):
-        path_to_file = r'ExtractedFrames/' + 'BadApple_' + str(frame_count) + '.jpg'
-        if os.path.isfile(path_to_file):
-            sys.stdout.write("\r" + path_to_file + " located")
-            verified_frames += 1
-            # sys.stdout.write("\r" + str(verified_frames))
-    if verified_frames > 6000:
-        sys.stdout.write("\rFrames found, proceeding to next step\n")
-    else:
-        sys.stdout.write("\rNot all frames found, extracting frames now\n")
-        extract_frames('BadApple.mp4')
+    try:
+        sys.stdout.write("Checking if frames have been extracted...\n")
+        verified_frames = 1
+        for frame_count in range(1, 6572):
+            path_to_file = r'ExtractedFrames/' + 'BadApple_' + str(frame_count) + '.jpg'
+            if os.path.isfile(path_to_file):
+                sys.stdout.write("\r" + path_to_file + " located")
+                verified_frames += 1
+                # sys.stdout.write("\r" + str(verified_frames))
+        if verified_frames > 6000:
+            sys.stdout.write("\rFrames found, proceeding to next step\n")
+        else:
+            sys.stdout.write("\rNot all frames found, extracting frames now\n")
+            extract_frames('BadApple.mp4')
+    except:
+        if not os.path.exists('ExtractedFrames'):
+            os.makedirs('ExtractedFrames')
 
 
 # Check if .txt files exist
 def check_txt():
-    sys.stdout.write("Checking if .txt files have been created...\n")
-    verified_frames = 1
-    for frame_count in range(1, 6572):
-        path_to_file = r'TextFiles/' + 'bad_apple' + str(frame_count) + '.txt'
-        if os.path.isfile(path_to_file):
-            verified_frames += 1
-    if verified_frames > 6000:
-        sys.stdout.write("\r.txt files located, proceeding to animation\n")
-    else:
-        sys.stdout.write("Converting frames to .txt...\n")
+    try:
+        sys.stdout.write("Checking if .txt files have been created...\n")
+        verified_frames = 1
         for frame_count in range(1, 6572):
-            path_to_file = r'ExtractedFrames/' + 'BadApple_' + str(frame_count) + '.jpg'
-            image = Image.open(path_to_file)
-            ascii_generator(image, frame_count)
-            progress_bar(frame_count, 6571)
-        sys.stdout.write('.txt files created, proceeding to animation')
+            path_to_file = r'TextFiles/' + 'bad_apple' + str(frame_count) + '.txt'
+            if os.path.isfile(path_to_file):
+                verified_frames += 1
+        if verified_frames > 6000:
+            sys.stdout.write("\r.txt files located, proceeding to animation\n")
+        else:
+            sys.stdout.write("Converting frames to .txt...\n")
+            for frame_count in range(1, 6572):
+                path_to_file = r'ExtractedFrames/' + 'BadApple_' + str(frame_count) + '.jpg'
+                image = Image.open(path_to_file)
+                ascii_generator(image, frame_count)
+                progress_bar(frame_count, 6571)
+            sys.stdout.write('.txt files created, proceeding to animation')
+    except:
+        if not os.path.exists('TextFiles'):
+            os.makedirs('TextFiles')
+
 
 # Delete extracted frames and .txt files
 def delete_assets():
