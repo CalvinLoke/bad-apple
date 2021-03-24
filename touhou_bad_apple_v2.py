@@ -21,11 +21,11 @@ def PlayVideo():
     for frame_number in range(1, 6571):
         start_time = time.time()
         file_name = r"TextFiles/" + "bad_apple" + str(frame_number) + ".txt"
-        f = open(file_name, "r")
-        sys.stdout.write("\r" + f.read())
+        with open(file_name, 'r') as f:
+            sys.stdout.write("\r" + f.read())
         compute_delay = float(time.time() - start_time)
         # delay_duration = frame_interval * (- 0.05 / 9000 + 1.02) - compute_delay # (golden value)
-        modifier = (-0.04/7500) * frame_number + 1.02
+        # modifier = (-0.04/7500) * frame_number + 1.02
         delay_duration = frame_interval - compute_delay
         logging.info(str(delay_duration))
         # print(modifier)
@@ -115,6 +115,7 @@ def check_frames():
     else:
         sys.stdout.write("\rNot all frames found, extracting frames now\n")
         extract_frames('BadApple.mp4')
+
 
 # Check if .txt files exist
 def check_txt():
