@@ -13,11 +13,11 @@ frame_interval = 1 / 31
 frame_size = 150
 
 
-def PlayAudio():
+def play_audio():
     playsound.playsound("bad-apple-audio.mp3", block=False)
 
 
-def PlayVideo():
+def play_video():
     for frame_number in range(1, 6571):
         start_time = time.time()
         file_name = r"TextFiles/" + "bad_apple" + str(frame_number) + ".txt"
@@ -60,6 +60,9 @@ def extract_frames(video_path):
     cap.release()
     sys.stdout.write("\nVideo frame extraction completed\n")
 
+# A little note of acknowledgement to AlexRohwer. The following code of converting image frames into ASCII characters is not original, and is
+# based off the code from https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py. As this code repository gains more 
+# traction, I feel that I need to properly source the code. 
 
 # Resize image
 def resize_image(image_frame):
@@ -177,9 +180,9 @@ def main():
             check_frames()  # Check if image frames have been extracted, extract if necessary
             check_txt()  # Check if .txt files have been created, create if necessary
             os.system('color F0')
-            PlayAudio()
+            play_audio()
             logging.info('Started')
-            PlayVideo()
+            play_video()
             logging.info('Stopped')
             os.system('color 07')
             continue
