@@ -11,7 +11,7 @@ There are many iterations and versions around YouTube and I wanted to give it a 
 My own video can be found [here](https://www.youtube.com/watch?v=AZfrXrk3ZHc).
 
 # Performance optimizations
-Currently, my implementation of results in an incremental error over time, which results in the frame accucracy drifting. 
+Currently, my implementation of a rudimentary static `time.sleep()` function results in an incremental error over time. This thus leads to the frame accucracy drifting. 
 
 I am also looking into improving frame extraction and generation times.
 
