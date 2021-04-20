@@ -7,8 +7,9 @@
 from PIL import Image
 import cv2
 import sys
-import time
+import shutil
 import os
+import time
 import logging
 import pygame
 
@@ -71,6 +72,7 @@ def extract_frames(video_path):
     cap.release()
     sys.stdout.write("\nVideo frame extraction completed\n")
 
+
 # A little note of acknowledgement to AlexRohwer. The following code of converting image frames into ASCII characters is not original, and is
 # based off the code from https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py. As this code repository gains more
 # traction, I feel that I need to properly source the code.
@@ -115,17 +117,11 @@ def ascii_generator(image_frame, index):
 # Check if frames have been extracted
 def check_frames():
     if not os.path.exists('ExtractedFrames'):
-            os.makedirs('ExtractedFrames')
-
+        os.makedirs('ExtractedFrames')
     sys.stdout.write("Checking if frames have been extracted...\n")
-    verified_frames = 1
-    for frame_count in range(1, 6572):
-        path_to_file = r'ExtractedFrames/' + 'BadApple_' + str(frame_count) + '.jpg'
-        if os.path.isfile(path_to_file):
-            sys.stdout.write("\r" + path_to_file + " located")
-            verified_frames += 1
-            # sys.stdout.write("\r" + str(verified_frames))
-    if verified_frames > 6000:
+    path = 'ExtractedFrames'
+    verified_frames = len([name for name in os.listdir(path)])
+    if verified_frames == 6571:
         sys.stdout.write("\rFrames found, proceeding to next step\n")
     else:
         sys.stdout.write("\rNot all frames found, extracting frames now\n")
@@ -137,12 +133,9 @@ def check_txt():
     if not os.path.exists('TextFiles'):
         os.makedirs('TextFiles')
     sys.stdout.write("Checking if .txt files have been created...\n")
-    verified_frames = 1
-    for frame_count in range(1, 6572):
-        path_to_file = r'TextFiles/' + 'bad_apple' + str(frame_count) + '.txt'
-        if os.path.isfile(path_to_file):
-            verified_frames += 1
-    if verified_frames > 6000:
+    path = 'TextFiles'
+    verified_frames = len([name for name in os.listdir(path)])
+    if verified_frames == 6571:
         sys.stdout.write("\r.txt files located, proceeding to animation\n")
     else:
         sys.stdout.write("Converting frames to .txt...\n")
@@ -156,22 +149,42 @@ def check_txt():
 
 # Delete extracted frames and .txt files
 def delete_assets():
-    for index in range(1, 6572):
-        # sys.stdout.write("Deleting frames...")
-        frame_name = r"ExtractedFrames/" + "BadApple_" + str(index) + ".jpg"
-        # print(frame_name)
-        try:
-            os.remove(frame_name)
-        except:
-            continue
+    user_input = input("Delete assets? (Y/n): ")
+    user_input.strip().lower()
 
-    for index in range(1, 6572):
-        # sys.stdout.write("Deleting .txt files...")
-        file_name = r"TextFiles/" + "bad_apple" + str(index) + ".txt"
-        try:
-            os.remove(file_name)
-        except:
-            continue
+    image_path = 'ExtractedFrames'
+    text_path = 'TextFiles'
+    if user_input == "y":
+        user_input2 = input("Delete all images? (Y/n): ")
+        user_input2.strip().lower()
+        if user_input2 == 'y':  # Deletes both images and .txt directories
+            try:
+                sys.stdout.write('Deleting assets...\n')
+                shutil.rmtree(image_path)
+                sys.stdout.write('Assets deleted\n')
+            except OSError as e:
+                print("Error: %s : %s" % (image_path, e.strerror))
+
+            try:
+                sys.stdout.write('Deleting assets...\n')
+                shutil.rmtree(text_path)
+                sys.stdout.write('Assets deleted\n')
+            except OSError as e:
+                print("Error: %s : %s" % (text_path, e.strerror))
+
+        elif user_input2 == "n":  # Only deletes .txt directory
+            try:
+                sys.stdout.write('Deleting assets...\n')
+                shutil.rmtree(text_path)
+                sys.stdout.write('Deleting assets...\n')
+            except OSError as e:
+                sys.stdout.write("Error, assets not found")
+
+    elif user_input == "n":
+        pass
+
+    else:
+        sys.stdout.write("Invalid option!\n")
 
 
 # Main function
@@ -199,9 +212,7 @@ def main():
             os.system('color 07')
             continue
         elif user_input == '2':
-            sys.stdout.write('Deleting assets...\n')
             delete_assets()
-            sys.stdout.write('Assets deleted\n')
             continue
         elif user_input == '3':
             exit()
