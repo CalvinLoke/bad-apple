@@ -55,8 +55,15 @@ Reads the files from the previously generated ASCII .txt files and prints it out
 ## play_audio()
 Plays the bad apple audio track. 
 
-## Progress bar function
-A simple progress bar function that generates the status of both frame extraction and ASCII frame generation. This code was taken from a [StackOverflow thread](https://stackoverflow.com/questions/6169217/replace-console-output-in-python).
+## progress_bar(current, total, barLength=25)
+A simple progress bar function that generates the status of both frame extraction and ASCII frame generation. 
+This code was taken from a [StackOverflow thread](https://stackoverflow.com/questions/6169217/replace-console-output-in-python).
+
+`current` is the current value/progress of the process. 
+
+`total` is the desired/intended end value of the process.
+
+`barLength=25` sets the length of the progress bar. (Default is 25 characters)
 
 ## ASCII Frame generation
 Not a particular function, but a group of functions.
