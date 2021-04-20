@@ -6,7 +6,7 @@ import playsound
 import os
 import logging
 
-ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
+ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
 
 # frame_interval = 0.0329
 frame_interval = 1 / 31
@@ -63,6 +63,7 @@ def extract_frames(video_path):
 # A little note of acknowledgement to AlexRohwer. The following code of converting image frames into ASCII characters is not original, and is
 # based off the code from https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py. As this code repository gains more 
 # traction, I feel that I need to properly source the code. 
+
 
 # Resize image
 def resize_image(image_frame):
