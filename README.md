@@ -38,13 +38,32 @@ looking at fixing some of them.
 
 1) block=False is not supported in Linux
 
-I am currently trying to find alternatives to the `playsound` library. Using two different threads is not an option currently as
-I was running into desynchronization issues.
+~~I am currently trying to find alternatives to the `playsound` library. Using two different threads is not an option currently as
+I was running into desynchronization issues.~~
+
+This issue has been fixed in v3, alongside other performance improvements. 
 
 2) No such file or directory: 'ExtractedFrames/BadApple_1.jpg'
 
 Not really sure how this is happening, but will be looking into fixing it. I was unable to replicate the error but I assume it is 
 due to my botchy implementation of file directories for the assets. 
+
+# Version descriptor
+1) touhou_bad_apple_v1.py
+
+First rudimentary version that accomplishes basic frame extraction and animation. Utilizes threads, but suffers from heavy
+synchronization issues.
+
+2) touhou_bad_apple_v2.py
+
+Extended version that includes a "GUI", some basic file I/O. Suffers from slight synchronization issues. Core program 
+logic was completed in 24 hours with some minor tweaks and comments afterwards. 
+
+3) touhou_bad_apple_v3.py
+
+Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite
+frame extraction and ASCII conversion. 
+
 
 # Functions
 The main functions will be listed here. 
