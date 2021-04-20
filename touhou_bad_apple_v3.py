@@ -16,7 +16,8 @@ import pygame
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
 
 # frame_interval = 0.0329
-frame_interval = 1 / 31
+# frame_interval = 1 / 31
+frame_interval = 1/30
 frame_size = 150
 
 
