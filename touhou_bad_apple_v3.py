@@ -39,7 +39,7 @@ def play_video():
         # delay_duration = frame_interval * (- 0.05 / 9000 + 1.02) - compute_delay # (golden value)
         # modifier = (-0.04/7500) * frame_number + 1.02
         delay_duration = frame_interval - compute_delay
-        logging.info(str(delay_duration))
+        logging.info(str(compute_delay))
         # print(modifier)
         # print(str(delay_duration))
         if delay_duration < 0:
