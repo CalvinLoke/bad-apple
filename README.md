@@ -18,6 +18,7 @@ First, ensure that you set your terminal to the directory of this repository.
 `cd bad-apple`
 
 Install the necessary dependencies and packages by using:
+
 `pip install -r requirements.txt`
 
 And to run the code:
