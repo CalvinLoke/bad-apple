@@ -37,10 +37,12 @@ Despite being a somewhat simple program, my crappy implementation has led to a l
 looking at fixing some of them. 
 
 1) block=False is not supported in Linux
+
 I am currently trying to find alternatives to the `playsound` library. Using two different threads is not an option currently as
 I was running into desynchronization issues.
 
 2) No such file or directory: 'ExtractedFrames/BadApple_1.jpg'
+
 Not really sure how this is happening, but will be looking into fixing it. I was unable to replicate the error but I assume it is 
 due to my botchy implementation of file directories for the assets. 
 
