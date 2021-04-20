@@ -11,15 +11,14 @@ There are many iterations and versions around YouTube and I wanted to give it a 
 My own video can be found [here](https://www.youtube.com/watch?v=AZfrXrk3ZHc).
 
 # Running this code
-With 20th April 2021's revision, I have added a virtual environment with the required packages and dependencies. 
+Thanks to [TheHusyin](https://github.com/TheHusyin) for adding a `requirements.txt` file for easier installs.
 
 First, ensure that you set your terminal to the directory of this repository. 
 
 `cd bad-apple`
 
-Activate the virtual environment by running:
-
-`.\venv\Scripts\activate`
+Install the necessary dependencies and packages by using:
+`pip install -r requirements.txt`
 
 And to run the code:
 
