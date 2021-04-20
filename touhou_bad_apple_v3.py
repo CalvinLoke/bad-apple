@@ -1,3 +1,9 @@
+# To do list:
+# - Optimize frame time intervals
+#   - Condense 6571 frames into single .txt file
+#   - Reformat file checking
+# - Multithreading for frame extraction and generation
+
 from PIL import Image
 import cv2
 import sys
