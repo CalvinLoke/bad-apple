@@ -154,33 +154,22 @@ def delete_assets():
 
     image_path = 'ExtractedFrames'
     text_path = 'TextFiles'
-    if user_input == "y":
-        user_input2 = input("Delete all images? (Y/n): ")
-        user_input2.strip().lower()
-        if user_input2 == 'y':  # Deletes both images and .txt directories
-            try:
-                sys.stdout.write('Deleting assets...\n')
-                shutil.rmtree(image_path)
-                sys.stdout.write('Assets deleted\n')
-            except OSError as e:
-                print("Error: %s : %s" % (image_path, e.strerror))
+    if user_input[0] == "y":
+        try:
+            sys.stdout.write('Deleting assets...\n')
+            shutil.rmtree(image_path)
+            sys.stdout.write('Assets deleted\n')
+        except OSError as e:
+            print("Error: %s : %s" % (image_path, e.strerror))
 
-            try:
-                sys.stdout.write('Deleting assets...\n')
-                shutil.rmtree(text_path)
-                sys.stdout.write('Assets deleted\n')
-            except OSError as e:
-                print("Error: %s : %s" % (text_path, e.strerror))
+        try:
+            sys.stdout.write('Deleting assets...\n')
+            shutil.rmtree(text_path)
+            sys.stdout.write('Assets deleted\n')
+        except OSError as e:
+            print("Error: %s : %s" % (text_path, e.strerror))
 
-        elif user_input2 == "n":  # Only deletes .txt directory
-            try:
-                sys.stdout.write('Deleting assets...\n')
-                shutil.rmtree(text_path)
-                sys.stdout.write('Deleting assets...\n')
-            except OSError as e:
-                sys.stdout.write("Error, assets not found")
-
-    elif user_input == "n":
+    elif user_input[0] == "n":
         pass
 
     else:
