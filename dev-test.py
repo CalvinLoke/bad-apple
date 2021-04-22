@@ -11,7 +11,6 @@ import shutil
 import os
 import time
 import logging
-import pygame
 import vlc
 
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
