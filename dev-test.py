@@ -9,9 +9,10 @@ import cv2
 import sys
 import shutil
 import os
+os.environ["KIVY_NO_ARGS"] = "1"
 import time
 import logging
-import vlc
+from kivy.core.audio import SoundLoader
 
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
 
@@ -21,9 +22,10 @@ frame_size = 150
 
 
 def play_audio():
-    bad_apple_mp3 = 'bad-apple-audio.mp3'
-    p = vlc.MediaPlayer(bad_apple_mp3)
-    p.play()
+
+    path_to_file = 'bad-apple-audio.mp3'
+    sound = SoundLoader.load(path_to_file)
+    sound.play()
 
 
 def play_video():
