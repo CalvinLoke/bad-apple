@@ -154,7 +154,7 @@ def delete_assets():
 
     image_path = 'ExtractedFrames'
     text_path = 'TextFiles'
-    if user_input[0] == 'y':
+    if user_input[0] == "y":
         try:
             sys.stdout.write('Deleting assets...\n')
             shutil.rmtree(image_path)
