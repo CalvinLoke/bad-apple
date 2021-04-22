@@ -9,6 +9,7 @@ import cv2
 import sys
 import shutil
 import os
+
 os.environ["KIVY_NO_ARGS"] = "1"
 import time
 import logging
@@ -22,7 +23,6 @@ frame_size = 150
 
 
 def play_audio():
-
     path_to_file = 'bad-apple-audio.mp3'
     sound = SoundLoader.load(path_to_file)
     sound.play()
