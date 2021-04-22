@@ -12,6 +12,7 @@ import os
 import time
 import logging
 import pygame
+import vlc
 
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
 
@@ -21,12 +22,9 @@ frame_size = 150
 
 
 def play_audio():
-    path_to_file = 'bad-apple-audio.mp3'
-    pygame.init()
-    pygame.mixer.pre_init(44100, -16, 2, 2048)
-    pygame.mixer.init()
-    pygame.mixer.music.load(path_to_file)
-    pygame.mixer.music.play()
+    bad_apple_mp3 = 'bad-apple-audio.mp3'
+    p = vlc.MediaPlayer(bad_apple_mp3)
+    p.play()
 
 
 def play_video():
@@ -194,7 +192,7 @@ def main():
             check_frames()  # Check if image frames have been extracted, extract if necessary
             check_txt()  # Check if .txt files have been created, create if necessary
             os.system('color F0')
-            # play_audio()
+            play_audio()
             logging.info('Started')
             play_video()
             logging.info('Stopped')
