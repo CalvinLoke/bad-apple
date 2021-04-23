@@ -73,9 +73,10 @@ def extract_frames(video_path):
     sys.stdout.write("\nVideo frame extraction completed\n")
 
 
-# A little note of acknowledgement to AlexRohwer. The following code of converting image frames into ASCII characters is not original, and is
-# based off the code from https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py. As this code repository gains more
-# traction, I feel that I need to properly source the code.
+# A little note of acknowledgement to AlexRohwer. The following code of converting image frames into ASCII characters
+# is not original, and is based off the code from
+# https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py. As this code repository gains
+# more traction, I feel that I need to properly source the code.
 
 
 # Resize image
