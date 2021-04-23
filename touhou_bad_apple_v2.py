@@ -9,7 +9,7 @@ import logging
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
 
 # frame_interval = 0.0329
-frame_interval = 1 / 31
+frame_interval = 1.0 / 31
 frame_size = 150
 
 
@@ -89,14 +89,14 @@ def pixels_to_ascii(image_frame):
 
 
 # Open image => Resize => Greyscale => Convert to ASCII => Store in text file
-def ascii_generator(image_frame, index):
+def ascii_generator(image_frame, frame_count):
     resized_image = resize_image(image_frame)  # resize the image
     greyscale_image = greyscale(resized_image)  # convert to greyscale
     ascii_characters = pixels_to_ascii(greyscale_image)  # get ascii characters
     pixel_count = len(ascii_characters)
     ascii_image = "\n".join(
         [ascii_characters[index:(index + frame_size)] for index in range(0, pixel_count, frame_size)])
-    file_name = r"TextFiles/" + "bad_apple" + str(index) + ".txt"
+    file_name = r"TextFiles/" + "bad_apple" + str(frame_count) + ".txt"
     with open(file_name, "w") as f:
         f.write(ascii_image)
 
@@ -174,18 +174,18 @@ def main():
         sys.stdout.write('3) Exit\n')
         sys.stdout.write('==============================================================\n')
 
-        user_input = input("Your option: ")
+        user_input = str(input("Your option: "))
         user_input.strip()  # removes trailing whitespaces
 
         if user_input == '1':
             check_frames()  # Check if image frames have been extracted, extract if necessary
             check_txt()  # Check if .txt files have been created, create if necessary
-            os.system('color F0')
+            #os.system('color F0')
             play_audio()
             logging.info('Started')
             play_video()
             logging.info('Stopped')
-            os.system('color 07')
+            #os.system('color 07')
             continue
         elif user_input == '2':
             sys.stdout.write('Deleting assets...\n')
