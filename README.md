@@ -28,7 +28,12 @@ And to run the code:
 And just follow the on-screen prompts. 
 
 # Performance optimizations
-Currently, my implementation of a rudimentary static `time.sleep()` function results in an incremental error over time. This thus leads to the frame accucracy drifting. 
+Currently, my implementation of a rudimentary static `time.sleep()` function results in an incremental error over time. 
+This thus leads to the frame accuracy drifting. 
+
+**UPDATE on 22/04/21** 
+With the replacement of the `playsound` library with `pygame`, the error over time seemed to have been fixed. Though, 
+further improvements and optimizations to the code can still be done. As of current, performance is not optimal
 
 I am also looking into improving frame extraction and generation times.
 
