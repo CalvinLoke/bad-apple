@@ -150,7 +150,7 @@ def check_txt():
 
 # Delete extracted frames and .txt files
 def delete_assets():
-    user_input = raw_input("Delete assets? (Y/n): ")
+    user_input = input("Delete assets? (Y/n): ")
     user_input.strip().lower()
 
     image_path = 'ExtractedFrames'
@@ -188,7 +188,7 @@ def main():
         sys.stdout.write('3) Exit\n')
         sys.stdout.write('==============================================================\n')
 
-        user_input = str(raw_input("Your option: "))
+        user_input = str(input("Your option: "))
         user_input.strip()  # removes trailing whitespaces
 
         if user_input == '1':
