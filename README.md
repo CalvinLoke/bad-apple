@@ -45,6 +45,16 @@ It seems that frame extraction is heavily bottle-necked by the drive's IOPS, and
 frame extraction further. I have created some rudimentary code for process-based and threading-based frame extraction,
 am looking to implement it for the ASCII generation soon. 
 
+**UPDATE ON 25/04/21**
+
+I got about to implementing multi-processing for both frame extraction and ASCII generation. Though it seems that my implementation of threading/processing is still very botchy and thus asset generation is still sub-optimal. Not too sure on how far I would want to take this project, though my main priority right now would be to adjust frame timings. 
+
+**SECOND UPDATE ON 25/04/21**
+
+Simply by replacing the primitive `time.sleep()` function with the `fpstimer` library, frame-time accuracy has been drastically improved, will be slowing down my code optimizations for playback from now onwards. 
+
+Though the main concern right now is trying to optimize asset generation times. 
+
 # Current known issues and bugs
 Despite being a somewhat simple program, my crappy implementation has led to a lot of unresovled bugs and issues. I am currently
 looking at fixing some of them. 
@@ -74,8 +84,15 @@ logic was completed in 24 hours with some minor tweaks and comments afterwards.
 
 3) touhou_bad_apple_v3.py
 
-Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite
-frame extraction and ASCII conversion. 
+~~Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite frame extraction and ASCII conversion.~~
+
+Play-testing version to use py-game. Doesn't really warrant a full version increment, will be updating the name to v2.5 or something like that once the new v4 is ready. 
+
+4) touhou_bad_apple_v4.py
+
+(Almost) re-written as the previous code was getting to messy to work with. Functions from previous versions are still used though. 
+
+Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations. 
 
 
 # Functions
