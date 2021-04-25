@@ -7,6 +7,7 @@ import shutil
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
+import fpstimer
 
 
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
@@ -26,7 +27,7 @@ def play_video(isMidi):
     os.system('color F0')
     os.system('mode 150, 500')
 
-    time.sleep(0.05)
+    timer = fpstimer.FPSTimer(30)
 
     if isMidi is True:
         start_frame = 40
@@ -42,7 +43,7 @@ def play_video(isMidi):
         delay_duration = frame_interval - compute_delay
         if delay_duration < 0:
             delay_duration = 0
-        time.sleep(delay_duration)
+        timer.sleep()
 
     os.system('color 07')
 
@@ -231,6 +232,9 @@ def main():
                 play_video(isMidi=True)
             else:
                 sys.stdout.write('Unknown input!\n')
+            continue
+        elif user_input == '2':
+            sys.stdout.write('Currently not in use\n')
             continue
         elif user_input == '3':
             exit()
