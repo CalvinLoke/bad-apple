@@ -34,6 +34,7 @@ class ExtractFrames(Thread):
             current_frame += 1  # increases global frame counter
         cap.release()
 
+
 def extract_frames_one_threads(video_path):
     cap = cv2.VideoCapture(video_path)
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -167,7 +168,7 @@ def extract_frames_old(video_path):
 
 path_to_video = 'BadApple.mp4'
 start_time = time.time()
-extract_frames_one_threads(path_to_video)
+extract_frames_two_threads(path_to_video)
 # extract_frames(path_to_video, 6571)
 end_time = time.time()
 
