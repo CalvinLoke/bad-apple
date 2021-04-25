@@ -61,6 +61,8 @@ def extract_transform_generate(video_path, start_frame, number_of_frames=1000):
         except Exception as error:
             continue
 
+        progress_bar(frame_count, number_of_frames)
+
         frame_count += 1  # increases internal frame counter
         current_frame += 1  # increases global frame counter
 
