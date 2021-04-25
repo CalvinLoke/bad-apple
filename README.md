@@ -32,10 +32,18 @@ Currently, my implementation of a rudimentary static `time.sleep()` function res
 This thus leads to the frame accuracy drifting. 
 
 **UPDATE on 22/04/21** 
+
 With the replacement of the `playsound` library with `pygame`, the error over time seemed to have been fixed. Though, 
-further improvements and optimizations to the code can still be done. As of current, performance is not optimal
+further improvements and optimizations to the code can still be done. As of current, performance is still not optimal.
+A major bottleneck lies in the IOPS when dealing with the .txt files, am still trying to find a better implementation. 
 
 I am also looking into improving frame extraction and generation times.
+
+**UPDATE ON 23/04/21**
+
+It seems that frame extraction is heavily bottle-necked by the drive's IOPS, and adding threads did not seem to expediate
+frame extraction further. I have created some rudimentary code for process-based and threading-based frame extraction,
+am looking to implement it for the ASCII generation soon. 
 
 # Current known issues and bugs
 Despite being a somewhat simple program, my crappy implementation has led to a lot of unresovled bugs and issues. I am currently
@@ -101,6 +109,24 @@ pixels_to_ascii()
 ```
 These functions are called in the `ascii_generator()` function to convert image files to ASCII format and stores them into .txt files. 
 
-Note that the ASCII conversion code is not original, and was taken from [here](https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py).
+Note that the ASCII conversion code is not original, and was taken from 
+[here](https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py).
+
+# Words of acknowledgements
+I should give credit where credit is due, and here is a section dedicated to that. 
+
+ZUN, and this incredible work on the Touhou project over the past decades.
+
+[Alstroemeria Records](https://www.youtube.com/channel/UCQ2uGVzfIbcqvZvrS0BVucw), 
+for making the original [Bad Apple!! MV](https://www.youtube.com/watch?v=i41KoE0iMYU). 
+
+[Ronald Macdonald](https://www.youtube.com/channel/UC3UIoTx99V9MQIkTh8ocUnQ), for making the 
+[MIDI Arrangement](https://www.youtube.com/watch?v=ANRzDT1pU8c) of the Bad-Apple!! used.
+
+GitHub users [karoush1](https://github.com/karoush1), [JasperTecHK](https://github.com/JasperTecHK), 
+[TheHusyin](https://github.com/TheHusyin),  [Mirageofmage](https://github.com/Mirageofmage) for their
+comments and bugfixes. 
+ 
+
  
 
