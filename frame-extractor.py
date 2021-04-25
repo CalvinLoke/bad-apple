@@ -1,6 +1,8 @@
 import cv2
 import sys
+import time
 
+# Single threaded frame extraction
 
 # Progress bar code is courtesy of StackOverflow user: Aravind Voggu.
 # Link to thread: https://stackoverflow.com/questions/6169217/replace-console-output-in-python
@@ -28,4 +30,11 @@ def extract_frames(video_path):
     sys.stdout.write("\rVideo frame extraction completed")
 
 
-extract_frames("BadApple.mp4")
+if __name__ == '__main__':
+    video_path = 'BadApple.mp4'
+
+    start_time = time.time()
+    extract_frames(video_path)
+    end_time = time.time()
+
+    print("Total execution time: ", end_time - start_time)
