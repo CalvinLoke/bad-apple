@@ -92,7 +92,19 @@ Play-testing version to use py-game. Doesn't really warrant a full version incre
 
 (Almost) re-written as the previous code was getting to messy to work with. Functions from previous versions are still used though. 
 
-Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations. 
+Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations.
+
+5) touhou_bad_apple_v4-5.py
+
+Once again my dumb naming schemes kick in again. After some toying around, I decided to scrap the .txt file generation
+and skip right storing ASCII within memory. While this means that 10 or 20 seconds is required for ASCII generation,
+it eliminates drive IO bottleneck. Also frees up a lot of storage space on host system. Overall probably the best one yet?
+
+6) touhou_bad_apple_v5.py
+
+Honestly I should not even get a job at file versioning. This version essentially allows the user to ASCII-fy any video
+provided that they have the video file in the root directory. 
+ 
 
 
 # Functions
