@@ -3,3 +3,5 @@ pillow
 playsound
 pygame
 fpstimer
+ffmpeg
+moviepy
