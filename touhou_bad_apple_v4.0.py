@@ -7,6 +7,7 @@ import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import fpstimer
+import platform
 
 
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", " "]
@@ -27,6 +28,11 @@ def play_audio(path):
 def play_video(isMidi):
     os.system('color F0')
     # os.system('mode 150, 500')
+    if platform.system() == 'Windows':
+        time.sleep(0)
+
+    elif platofrm.sysstem() == 'Linux':
+        time.sleep(1)
 
     timer = fpstimer.FPSTimer(30)
 
