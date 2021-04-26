@@ -26,7 +26,7 @@ def play_audio(path):
 
 def play_video(isMidi):
     os.system('color F0')
-    os.system('mode 150, 500')
+    # os.system('mode 150, 500')
 
     timer = fpstimer.FPSTimer(30)
 
@@ -138,12 +138,17 @@ def preflight_operations():
     process4_start_frame = process3_end_frame + 1
     process4_end_frame = total_frames - 1
 
-    start_time = time.time()
-    sys.stdout.write('Beginning ASCII generation...\n')
-    extract_transform_generate(video_path, 1, process4_end_frame)
-    execution_time = time.time() - start_time
-    sys.stdout.write('\nASCII generation completed! ASCII generation time: ' + str(execution_time))
-    time.sleep(2)
+    # Checks if ASCII list is empty:
+    if not ASCII_LIST:
+        start_time = time.time()
+        sys.stdout.write('Beginning ASCII generation...\n')
+        extract_transform_generate(video_path, 1, process4_end_frame)
+        execution_time = time.time() - start_time
+        sys.stdout.write('\nASCII generation completed! ASCII generation time: ' + str(execution_time))
+        time.sleep(2)
+    if ASCII_LIST:
+        sys.stdout.write('Using old ASCII assets...\n')
+        time.sleep(2)
 
 
 def main():
