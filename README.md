@@ -1,6 +1,52 @@
 # bad-apple
  Bad Apple printed out on the console with Python!
 
+@@@######SSSSSSS%%%%%??????*****+++++++;;;;;;:::  :: ,:::::::::,,,,,,,,,,,                                                                            
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@?+@@S#@@@@@@@@@@@@##S?*+:,                                                                            
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#%+;,,                                                                                 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%;,                                                                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%                                                                                         
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@?                                                                                         
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:                                                                                        
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:                                                                                       
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%?*+;;;:::,               ,,,,,,,,,,,,,,,                                              
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:             ,S##########@@@@#%?*+;::++                                     
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#,             *@@@@@@@@@@@@@@@@@@@@@@@@@S;                                   
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%             ,S@@@@@@@@@@@@@@@@@@@@@@@@@@@S;                                 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*             ;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:                               
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@;             ?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@?,                          ,;?
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#,             %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#+                       :?#@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%              ,?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*                   ,;?#@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*                ,+?S@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*:              ,;?#@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@;S@#%,                    :*S@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+,          :S@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+:+,                        ,;%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#?:,       :@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@S*:                              :#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@S*:   ,,%@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#?:                                  ?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+:+#@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+,                                    ;#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#;                                       :S@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@;                                         :#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#,                                          ;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+                                           S@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:                                          ?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@S,                                        ,S@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#;                                       ,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:                                     +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%;,                                 ,#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*:,                             ,?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#%+:,                  ,   ,:*#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#S+,,            ,?@S?%#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#SS%*;;;;++*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 # Preface
 A word of disclaimer, while the final code is somewhat original, this project is an amalgamation of different code snippets that I found online. As the main YouTube Video begins to gain traction, I feel the need to inform the audience that this code is NOT ENTIRELY ORIGINAL. 
 
@@ -10,10 +56,14 @@ There are many iterations and versions around YouTube and I wanted to give it a 
 
 My own video can be found [here](https://www.youtube.com/watch?v=AZfrXrk3ZHc).
 
-# Running this code
+# Running this code/Pre-requisites
 Thanks to [TheHusyin](https://github.com/TheHusyin) for adding a `requirements.txt` file for easier installs.
 
-First, ensure that you set your terminal to the directory of this repository. 
+You can either `git clone` or download a ZIP of this repository. 
+
+`git clone https://github.com/CalvinLoke/bad-apple`
+
+Then, ensure that you set your terminal to the directory of this repository. 
 
 `cd bad-apple`
 
@@ -23,7 +73,7 @@ Install the necessary dependencies and packages by using:
 
 And to run the code:
 
-`python touhou_bad_apple_v2.py`
+`python touhou_bad_apple_v4.0.py`
 
 And just follow the on-screen prompts. 
 
@@ -55,21 +105,27 @@ Simply by replacing the primitive `time.sleep()` function with the `fpstimer` li
 
 Though the main concern right now is trying to optimize asset generation times. 
 
+**THIRD UPDATE ON 25/04/21**
+
+Changed the approach of storing assets. Should significantly reduce asset generation times, averaging arond 10 ~ 15 seconds using single thread. Will still look into threading to further expedite asset generation. However, with `touhou_bad_apple_v4.0.py`, progress will now slow down as I finally close the chapter of this project. 
+
 # Current known issues and bugs
 Despite being a somewhat simple program, my crappy implementation has led to a lot of unresovled bugs and issues. I am currently
 looking at fixing some of them. 
 
-1) block=False is not supported in Linux
+1) block=False is not supported in Linux (Only for v2.0 and below)
 
 ~~I am currently trying to find alternatives to the `playsound` library. Using two different threads is not an option currently as
 I was running into desynchronization issues.~~
 
-This issue has been fixed in v3, alongside other performance improvements. 
+This issue has been fixed in ~~v3~~ v2.5, alongside other performance improvements. 
 
-2) No such file or directory: 'ExtractedFrames/BadApple_1.jpg'
+2) No such file or directory: 'ExtractedFrames/BadApple_1.jpg' (Only for v3.0 and v2.5)
 
-Not really sure how this is happening, but will be looking into fixing it. I was unable to replicate the error but I assume it is 
-due to my botchy implementation of file directories for the assets. 
+~~Not really sure how this is happening, but will be looking into fixing it. I was unable to replicate the error but I assume it is 
+due to my botchy implementation of file directories for the assets.~~
+
+Issue could be due to host machine not having ffmpeg installed. Ensure that you have ffmpeg installed and run the script again. v4 and v4.5 will not return this error, though will need to do some limit testing to figure it out. 
 
 # Version descriptor
 1) touhou_bad_apple_v1.py
@@ -77,30 +133,45 @@ due to my botchy implementation of file directories for the assets.
 First rudimentary version that accomplishes basic frame extraction and animation. Utilizes threads, but suffers from heavy
 synchronization issues.
 
-2) touhou_bad_apple_v2.py
+2) touhou_bad_apple_v2.py 
 
 Extended version that includes a "GUI", some basic file I/O. Suffers from slight synchronization issues. Core program 
 logic was completed in 24 hours with some minor tweaks and comments afterwards. 
 
-3) touhou_bad_apple_v3.py
+3) ~~touhou_bad_apple_v3.py~~ ==> Renamed to touhou_bad_apple_v2.5.py
 
-~~Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite frame extraction and ASCII conversion.~~
+~~Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite frame extraction and ASCII conversion. Play-testing version to use py-game. Doesn't really warrant a full version increment, will be updating the name to v2.5 or something like that once the new v4 is ready. ~~
 
-Play-testing version to use py-game. Doesn't really warrant a full version increment, will be updating the name to v2.5 or something like that once the new v4 is ready. 
+Slightly better version due to incorporation of `pygame` for music playing. Rectifies issue when attempting to play on Linux based environments since the older `playsound` library did not support `blocking=False` on said environments. 
 
-4) touhou_bad_apple_v4.py
+Still has rudimentary frame extraction and ASCII generation on single thread/process, which makes asset generation significantly longer.
 
-(Almost) re-written as the previous code was getting to messy to work with. Functions from previous versions are still used though. 
+4) ~~touhou_bad_apple_v4.py~~ ==> Renamed to touhou_bad_apple_v3.0.py
 
-Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations.
+~~(Almost) re-written as the previous code was getting to messy to work with. Functions from previous versions are still used though. 
 
-5) touhou_bad_apple_v4-5.py
+Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations.~~
+
+Rewritten to incorporate multiprocess, though implementation is very janky. Overall program structure was also refactored a bit to clean up `main()` function. Asset generation times were reduced a bit, but the double `for` loop meant that it generation times are close to a minute. 
+
+5) ~~touhou_bad_apple_v4-5.py~~ ==> Renamed to touhou_bad_apple_v4.0.py
 
 Once again my dumb naming schemes kick in again. After some toying around, I decided to scrap the .txt file generation
-and skip right storing ASCII within memory. While this means that 10 or 20 seconds is required for ASCII generation,
-it eliminates drive IO bottleneck. Also frees up a lot of storage space on host system. Overall probably the best one yet?
+and skip right storing ASCII within memory. This version completely rewrites the asset generation algorithm. Instead of the old 
 
-6) touhou_bad_apple_v5.py
+Video => Extracted_Images (stored in storage) => ASCII Characters (stored in memory) => .txt (stored in storage)
+
+process, ASCII generation is done on the image stored within memory, so 
+
+Video => Extracted_Images (stored in memory) => ASCII Characters (stored in memory) => Internal list (stored in memory)
+
+Makes more sense as compared to older iterations and significantly cuts down asset generation times. 
+
+While this means that 10 or 20 seconds is required for ASCII generation,
+it eliminates storage IO bottleneck. Also frees up a lot of storage space on host system. Overall probably the best one yet? 
+
+
+6) ~~touhou_bad_apple_v5.py~~ ==> Renamed to touhou_bad_apple_v4.5.py
 
 Honestly I should not even get a job at file versioning. This version essentially allows the user to ASCII-fy any video
 provided that they have the video file in the root directory. 
