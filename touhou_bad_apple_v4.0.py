@@ -31,7 +31,7 @@ def play_video(isMidi):
     if platform.system() == 'Windows':
         time.sleep(0)
 
-    elif platofrm.sysstem() == 'Linux':
+    elif platform.sysstem() == 'Linux':
         time.sleep(1)
 
     timer = fpstimer.FPSTimer(30)
