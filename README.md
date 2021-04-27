@@ -65,6 +65,16 @@ Though the main concern right now is trying to optimize asset generation times.
 
 Changed the approach of storing assets. Should significantly reduce asset generation times, averaging arond 10 ~ 15 seconds using single thread. Will still look into threading to further expedite asset generation. However, with `touhou_bad_apple_v4.0.py`, progress will now slow down as I finally close the chapter of this project. 
 
+**UPDATE ON 27/04/21**
+
+It looks like most of the issues have been rectified, and the code has reached desirableh performance. While I could further boost ASCII generation and add new functionality to the code, I feel that it would be over-engineering such a simple project. What started out as a weekend project blew up to such proportions, and led me to learn many new and interesting concepts along the way. 
+
+I really would like to thank [JasperTecHK](https://github.com/JasperTecHK) for his recommendations and suggestions along the way. His input was what really led me to return to this project after two dead weeks. 
+
+As such, major updates to the code would come much slower now, as the current iteration of the project has far exceeded my orginal goal. Though, it would be interesting to further develop `v4.5` to have color support, but I would presume that requires its own development cycle. Once again, I really would like to thank all the contributors to this simple and dumb piece of code that I wrote in 24 hours. 
+
+Cheers!
+
 # Current known issues and bugs
 Despite being a somewhat simple program, my crappy implementation has led to a lot of unresovled bugs and issues. I am currently
 looking at fixing some of them. 
@@ -72,14 +82,14 @@ looking at fixing some of them.
 1) block=False is not supported in Linux (Only for v2.0 and below)
 
 ~~I am currently trying to find alternatives to the `playsound` library. Using two different threads is not an option currently as
-I was running into desynchronization issues.~~
+I was running into desynchronization issues~~
 
 This issue has been fixed in ~~v3~~ v2.5, alongside other performance improvements. 
 
 2) No such file or directory: 'ExtractedFrames/BadApple_1.jpg' (Only for v3.0 and v2.5)
 
 ~~Not really sure how this is happening, but will be looking into fixing it. I was unable to replicate the error but I assume it is 
-due to my botchy implementation of file directories for the assets.~~
+due to my botchy implementation of file directories for the assets~~
 
 Issue could be due to host machine not having ffmpeg installed. Ensure that you have ffmpeg installed and run the script again. v4 and v4.5 will not return this error, though will need to do some limit testing to figure it out. 
 
@@ -96,7 +106,7 @@ logic was completed in 24 hours with some minor tweaks and comments afterwards.
 
 3) ~~touhou_bad_apple_v3.py~~ ==> Renamed to touhou_bad_apple_v2.5.py
 
-~~Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite frame extraction and ASCII conversion. Play-testing version to use py-game. Doesn't really warrant a full version increment, will be updating the name to v2.5 or something like that once the new v4 is ready. ~~
+~~Current development version. Improved frame time delay and better file I/O. Looking to implement threading to expedite frame extraction and ASCII conversion. Play-testing version to use py-game. Doesn't really warrant a full version increment, will be updating the name to v2.5 or something like that once the new v4 is ready~~
 
 Slightly better version due to incorporation of `pygame` for music playing. Rectifies issue when attempting to play on Linux based environments since the older `playsound` library did not support `blocking=False` on said environments. 
 
@@ -104,9 +114,9 @@ Still has rudimentary frame extraction and ASCII generation on single thread/pro
 
 4) ~~touhou_bad_apple_v4.py~~ ==> Renamed to touhou_bad_apple_v3.0.py
 
-~~(Almost) re-written as the previous code was getting to messy to work with. Functions from previous versions are still used though. 
+~~(Almost) re-written as the previous code was getting to messy to work with. Functions from previous versions are still used though.~~
 
-Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations.~~
+~~Will be renamed to v3 once I improve asset generation times with better threading code. However, "v4" is currently the most frame-accurate version thanks to the `fpstimer` library. And subsequent changes are only for smaller performance optimizations.~~
 
 Rewritten to incorporate multiprocess, though implementation is very janky. Overall program structure was also refactored a bit to clean up `main()` function. Asset generation times were reduced a bit, but the double `for` loop meant that it generation times are close to a minute. 
 
