@@ -16,7 +16,7 @@ frame_interval = 1.0 / 30.75
 
 ASCII_LIST = []
 
-
+# Plays audio asychronously using pygame library
 def play_audio(path):
     pygame.init()
     pygame.mixer.pre_init(44100, -16, 2, 2048)
@@ -24,27 +24,31 @@ def play_audio(path):
     pygame.mixer.music.load(path)
     pygame.mixer.music.play()
 
+# Reads ASCII characters and prints them out on screen
+def play_video(isMidi, end_frame):
 
-def play_video(isMidi):
+    # Alters CLI interface for Bad Apple!! (only works for Windows)
     os.system('color F0')
-    # os.system('mode 150, 500')
+
+    # Band-aid fix for audio-syncrhonization issues across different platforms. Might need to look into the root cause.
     if platform.system() == 'Windows':
         time.sleep(0)
 
     elif platform.system() == 'Linux':
-        time.sleep(0.5)
+        time.sleep(0.75)
 
     timer = fpstimer.FPSTimer(30)
 
     if isMidi is True:
-        start_frame = 40
+        start_frame = 30
     else:
         start_frame = 1
 
-    for frame_number in range(start_frame, 6570):
+    for frame_number in range(start_frame, end_frame-1):
         sys.stdout.write("\r" + ASCII_LIST[frame_number])
         timer.sleep()
 
+    sys.stdout.write('\n')
     os.system('color 07')
 
 
@@ -54,7 +58,9 @@ def extract_transform_generate(video_path, start_frame, number_of_frames=1000):
     capture.set(1, start_frame)  # Points cap to target frame
     current_frame = start_frame
     frame_count = 1
-    ret, image_frame = capture.read()
+    ret, image_frame = capture.read() # Reads the first frame of the source video
+
+    # Cycles through video frames, extracts them and converts them to ASCII before storing into memory
     while ret and frame_count <= number_of_frames:
         ret, image_frame = capture.read()
         try:
@@ -64,8 +70,9 @@ def extract_transform_generate(video_path, start_frame, number_of_frames=1000):
             ascii_image = "\n".join(
                 [ascii_characters[index:(index + frame_size)] for index in range(0, pixel_count, frame_size)])
 
-            ASCII_LIST.append(ascii_image)
+            ASCII_LIST.append(ascii_image) 
 
+        # Band-aid fix when image is not found for some reason
         except Exception as error:
             continue
 
@@ -84,6 +91,12 @@ def progress_bar(current, total, barLength=25):
     arrow = '#' * int(progress / 100 * barLength - 1)
     spaces = ' ' * (barLength - len(arrow))
     sys.stdout.write('\rProgress: [%s%s] %d%% Frame %d of %d frames' % (arrow, spaces, progress, current, total))
+
+
+# A little note of acknowledgement to AlexRohwer. The following code of converting image frames into ASCII characters
+# is not original, and is based off the code from
+# https://github.com/kiteco/python-youtube-code/blob/master/ascii/ascii_convert.py. As this code repository gains
+# more traction, I feel that I need to properly source the code.
 
 
 # Resize image
@@ -128,35 +141,29 @@ def ascii_generator(image_path, start_frame, number_of_frames):
         current_frame += 1
 
 
+# Generates ASCII and store it in memory 
 def preflight_operations():
     video_path = 'BadApple.mp4'
     cap = cv2.VideoCapture(video_path)
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     cap.release()
 
-    frames_per_process = int(total_frames / 4)
-
-    process1_end_frame = frames_per_process
-    process2_start_frame = process1_end_frame + 1
-    process2_end_frame = process2_start_frame + frames_per_process
-    process3_start_frame = process2_end_frame + 1
-    process3_end_frame = process3_start_frame + frames_per_process
-    process4_start_frame = process3_end_frame + 1
-    process4_end_frame = total_frames - 1
-
-    # Checks if ASCII list is empty:
+    # Checks if ASCII list is empty, only for v4.0 where the only video playback is Bad Apple!!:
     if not ASCII_LIST:
         start_time = time.time()
         sys.stdout.write('Beginning ASCII generation...\n')
-        extract_transform_generate(video_path, 1, process4_end_frame)
+        extract_transform_generate(video_path, 0, total_frames)
         execution_time = time.time() - start_time
         sys.stdout.write('\nASCII generation completed! ASCII generation time: ' + str(execution_time))
         time.sleep(2)
-    if ASCII_LIST:
-        sys.stdout.write('Using old ASCII assets...\n')
+    elif ASCII_LIST:
+        sys.stdout.write('ASCII assets found in memory, re-using assets\n')
         time.sleep(2)
 
+    return total_frames
 
+
+# Main running loop
 def main():
     while True:
         sys.stdout.write('==============================================================\n')
@@ -174,14 +181,14 @@ def main():
             user_input.strip()  # removes trailing whitespaces
             if user_input == '0':
                 path_to_file = 'bad-apple-audio.mp3'
-                preflight_operations()
+                total_frames = preflight_operations()
                 play_audio(path_to_file)
-                play_video(isMidi=False)
+                play_video(isMidi=False, end_frame=total_frames)
             elif user_input == '1':
                 path_to_file = 'alstroemeria_records_bad_apple.mid'
-                preflight_operations()
+                total_frames = preflight_operations()
                 play_audio(path_to_file)
-                play_video(isMidi=True)
+                play_video(isMidi=True, end_frame=total_frames)
             else:
                 sys.stdout.write('Unknown input!\n')
             continue
