@@ -166,6 +166,14 @@ def preflight_operations():
 # Main running loop
 def main():
     while True:
+        user_input = input("Please enter your desired frame size (default: 150): ")
+        user_input.strip()  # removes trailing whitespaces
+        try:
+            global frame_size
+            frame_size = int(user_input)
+        except:
+            sys.stdout.write('Invalid frame size!: \n')
+
         sys.stdout.write('==============================================================\n')
         sys.stdout.write('Select option: \n')
         sys.stdout.write('1) Play\n')
