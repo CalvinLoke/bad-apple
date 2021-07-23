@@ -24,18 +24,18 @@ def play_audio(path):
     pygame.mixer.music.load(path)
     pygame.mixer.music.play()
 
+
 # Reads ASCII characters and prints them out on screen
 def play_video(isMidi, end_frame):
 
-    # Alters CLI interface for Bad Apple!! (only works for Windows)
-    os.system('color F0')
-
     # Band-aid fix for audio-syncrhonization issues across different platforms. Might need to look into the root cause.
     if platform.system() == 'Windows':
+        # Alters CLI interface for Bad Apple!! (only works for Windows)
+        os.system('color F0')
         time.sleep(0)
 
     elif platform.system() == 'Linux':
-        time.sleep(0.75)
+        time.sleep(0.2)
 
     timer = fpstimer.FPSTimer(30)
 
