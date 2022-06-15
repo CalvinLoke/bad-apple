@@ -31,10 +31,8 @@ def play_video(total_frames):
 
     timer = fpstimer.FPSTimer(30)
 
-    start_frame = 0
-
-    for frame_number in range(start_frame, total_frames):
-        sys.stdout.write("\r" + ASCII_LIST[frame_number])
+    for frame in ASCII_LIST:
+        sys.stdout.write("\r" + frame)
         timer.sleep()
 
     # os.system('color 07')
@@ -169,6 +167,9 @@ def main():
             total_frames = preflight_operations(user_input)
             play_audio('audio.mp3')
             play_video(total_frames=total_frames)
+            sys.stdout.write('\n\n==============================================================\n')
+            sys.stdout.write('Video finished\n')
+
         elif user_input == '2':
             exit()
             continue
