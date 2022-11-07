@@ -1,7 +1,10 @@
+numpy
+soundfile
 opencv-python
 pillow
-playsound
 pygame
 fpstimer
 ffmpeg
 moviepy
+rich
+click
